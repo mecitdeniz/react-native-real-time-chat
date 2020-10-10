@@ -62,26 +62,39 @@ class Chat extends React.Component{
         if(item.username !== username){
             return(
                 <View style={styles.messageOuterContainer}>
-                    <View style={{alignItems:"center"}}>
-                        <SvgUri
-                            width="45"
-                            height="45"
-                            uri={item.avatar}
-                        />
-                        <Text>{item.username}</Text>
+                    <View style={{flex:2,flexDirection:"row"}}>
+                        <View style={{width:60,alignItems:"center",justifyContent:"center"}}>
+                            <SvgUri
+                                width="45"
+                                height="45"
+                                uri={item.avatar}
+                            />
+                            <Text>{item.username}</Text>
+                        </View>
+                    
+                        <View style={[styles.messageContainer,{flex:1}]}>
+                            <Text style={{color:"white"}}>{item.text}</Text>
+                        </View>
                     </View>
                     
-                    <View style={styles.messageContainer}>
-                        <Text style={{color:"white"}}>{item.text}</Text>
+                    <View style={{flex:1,justifyContent:"center",alignItems:"flex-end"}}>
+                        <Text>{item.time}</Text>
                     </View>
                 </View> 
                 
             )
         }else{
             return(
-                <View style={styles.messageContainer2}>
-                    <Text style={{color:"white"}}>{item.text}</Text>
-                </View>           
+                <View style={{flexDirection:"row",justifyContent:"space-around"}}>
+                    <View style={{flex:1,justifyContent:"center",alignItems:"flex-start"}}>
+                        <Text>{item.time}</Text>
+                    </View>
+
+                    <View style={styles.messageContainer2}>
+                        <Text style={{color:"white"}}>{item.text}</Text>
+                    </View> 
+                </View>
+                          
             )
         }
         
@@ -168,7 +181,7 @@ const styles = StyleSheet.create({
         maxWidth:windowWidth/2-10,
         minWidth:100,
         padding:15,
-        backgroundColor:"#F1F3F4",
+        backgroundColor:"gray",
         margin:10,
         borderBottomLeftRadius:10,
         borderBottomRightRadius:10,
@@ -201,7 +214,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
         elevation: 5,
     },messageOuterContainer:{
-        flexDirection:"row"
+        flexDirection:"row",
     }
 });
 

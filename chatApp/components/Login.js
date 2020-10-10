@@ -3,12 +3,14 @@ import {
     View,
     Text,
     Alert,
+    Image,
     Dimensions,
     StyleSheet,
     TouchableOpacity
 } from 'react-native';
 import InputTextField from './InputTextField';
 const windowWidth = Dimensions.get('window').width;
+const Logo = require('../src/Logo.png');
 
 class Login extends React.Component{
 
@@ -44,6 +46,7 @@ class Login extends React.Component{
     render(){
         return(
             <View style={styles.container}>
+                <Image source={Logo}/>
                 <View style={styles.form}>
                     <InputTextField
                         title="Username"
