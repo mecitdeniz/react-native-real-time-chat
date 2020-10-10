@@ -1,3 +1,4 @@
+![Logo]
 # React native real time chat app
 
 Simple real time chat app with room functionality.
@@ -8,10 +9,16 @@ Simple real time chat app with room functionality.
 * Express
 * Socket.io
 
-<img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s1.png" width="120"> |
+### ScreenShots
+<p float="left">
+  <img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s1.png" alt="alt text" width="240">
+  <img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s2.png" alt="alt text" width="240"> 
+</p>
+<br>
+<p float="left">
+  <img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s3.png" alt="alt text" width="240">
+  <img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s4.png" alt="alt text" width="270">
+</p>
 
-<img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s2.png" width="120"> |
 
-<img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s3.png" width="120"> |
-
-<img src="https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/s4.png" width="120">
+[Logo]: https://github.com/mecitdeniz/react-native-real-time-chat/blob/main/chatApp/src/Logo.png
