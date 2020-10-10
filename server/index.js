@@ -21,9 +21,8 @@ io.on('connection', (socket) => {
         const user = userJoin(socket.id, username, room, generator.generateRandomAvatar());
         socket.join(user.room);
         //Wellcome new user
-        socket.emit('message',formatMessage(chatBot.username,"Wellcome to the chat",chatBot.avatar))
-        socket.broadcast.to(user.room).emit('message',formatMessage("Chat Bot",`${user.username} has joined to chat`))
-
+        socket.emit('message',formatMessage(chatBot.username,`Wellcome to the ${user.room} chat`,chatBot.avatar))
+        socket.broadcast.to(user.room).emit('message',formatMessage(chatBot.username,`${user.username} has joined to the chat`,chatBot.avatar))
     })  
     
       //Listen for chat message
